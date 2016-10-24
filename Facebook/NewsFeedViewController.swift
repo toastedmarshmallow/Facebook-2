@@ -11,6 +11,8 @@ import UIKit
 class NewsFeedViewController: UIViewController {
     
     var selectedImageView: UIImageView!
+    
+    var imageTransition: ImageTransition!
 
     @IBOutlet weak var scrollView: UIScrollView!
     @IBOutlet weak var feedImageView: UIImageView!
@@ -62,6 +64,12 @@ class NewsFeedViewController: UIViewController {
         let photoViewController = segue.destination as! PhotoViewController
         
         photoViewController.image = selectedImageView.image
+        
+        photoViewController.modalPresentationStyle = UIModalPresentationStyle.custom
+        
+        imageTransition = ImageTransition()
+        
+        photoViewController.transitioningDelegate = imageTransition
     }
  
     
