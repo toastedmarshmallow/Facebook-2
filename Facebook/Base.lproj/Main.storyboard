@@ -248,10 +248,26 @@
                         <action selector="didTapPhoto:" destination="hBK-bb-7vk" id="jTl-2W-vA8"/>
                     </connections>
                 </tapGestureRecognizer>
-                <tapGestureRecognizer id="BHq-3m-g9r"/>
-                <tapGestureRecognizer id="Vrn-sQ-WNd"/>
-                <tapGestureRecognizer id="w7D-u0-8ZV"/>
-                <tapGestureRecognizer id="uH6-O8-dfj"/>
+                <tapGestureRecognizer id="BHq-3m-g9r">
+                    <connections>
+                        <action selector="didTapPhoto:" destination="hBK-bb-7vk" id="dQc-cH-Oh3"/>
+                    </connections>
+                </tapGestureRecognizer>
+                <tapGestureRecognizer id="Vrn-sQ-WNd">
+                    <connections>
+                        <action selector="didTapPhoto:" destination="hBK-bb-7vk" id="Ubl-vE-a6p"/>
+                    </connections>
+                </tapGestureRecognizer>
+                <tapGestureRecognizer id="w7D-u0-8ZV">
+                    <connections>
+                        <action selector="didTapPhoto:" destination="hBK-bb-7vk" id="pEu-Xz-tHg"/>
+                    </connections>
+                </tapGestureRecognizer>
+                <tapGestureRecognizer id="uH6-O8-dfj">
+                    <connections>
+                        <action selector="didTapPhoto:" destination="hBK-bb-7vk" id="23w-0a-lOG"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="-943.5" y="1221.5"/>
         </scene>
@@ -642,13 +658,20 @@
                                 <frame key="frameInset" minX="309" minY="30" width="51" height="27"/>
                                 <autoresizingMask key="autoresizingMask"/>
                             </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="cMu-HO-tpg">
+                                <frame key="frameInset" minX="313" minY="30" width="46" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <connections>
+                                    <action selector="didTapDone:" destination="4zG-hU-hFP" eventType="touchUpInside" id="foq-Tl-UUU"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hZU-EU-zrL" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="477" y="2066"/>
+            <point key="canvasLocation" x="476.5" y="2065.5"/>
         </scene>
     </scenes>
     <resources>
