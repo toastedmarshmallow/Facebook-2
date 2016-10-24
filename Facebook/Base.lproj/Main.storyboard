@@ -679,7 +679,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <subviews>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" id="OZ5-Sf-hRS">
-                                        <rect key="frame" x="67" y="153" width="240" height="128"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="558"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                     </imageView>
                                 </subviews>
@@ -687,6 +687,9 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
+                    <connections>
+                        <outlet property="imageView" destination="OZ5-Sf-hRS" id="bVc-Ie-Mj6"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hZU-EU-zrL" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

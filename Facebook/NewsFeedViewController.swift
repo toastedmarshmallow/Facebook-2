@@ -9,6 +9,8 @@
 import UIKit
 
 class NewsFeedViewController: UIViewController {
+    
+    var selectedImageView: UIImageView!
 
     @IBOutlet weak var scrollView: UIScrollView!
     @IBOutlet weak var feedImageView: UIImageView!
@@ -42,8 +44,26 @@ class NewsFeedViewController: UIViewController {
     }
     
     @IBAction func didTapPhoto(_ sender: UITapGestureRecognizer) {
+        
+        selectedImageView = sender.view as! UIImageView
+        
         performSegue(withIdentifier: "photoSegue", sender: nil)
     }
+    
+    
+     // MARK: - Navigation
+     
+     // In a storyboard-based application, you will often want to do a little preparation before navigation
+     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+     // Get the new view controller using segue.destinationViewController.
+     // Pass the selected object to the new view controller.
+        print("I'm about to go!")
+        
+        let photoViewController = segue.destination as! PhotoViewController
+        
+        photoViewController.image = selectedImageView.image
+    }
+ 
     
     
 }
