@@ -63,7 +63,7 @@ class NewsFeedViewController: UIViewController {
         
         let photoViewController = segue.destination as! PhotoViewController
         
-        photoViewController.image = selectedImageView.image
+        //photoViewController.image = selectedImageView.image
         
         photoViewController.modalPresentationStyle = UIModalPresentationStyle.custom
         

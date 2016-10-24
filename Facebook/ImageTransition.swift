@@ -18,22 +18,32 @@ class ImageTransition: BaseTransition {
         let feedViewController = navigationController.topViewController as! NewsFeedViewController
         let toViewController = toViewController as! PhotoViewController
         
-//        let newsfeedViewController = fromViewController as! NewsFeedViewController
-//        let photoViewController = toViewController as! PhotoViewController
+        let originalImageSize = toViewController.imageView.frame
+        
+        //add the temp view the same size and height as the original image
+        //translate those coordinates in the new view
+        let tempView = UIImageView()
+        tempView.image = feedViewController.selectedImageView.image
+        let frame = toViewController.imageView.convert(feedViewController.selectedImageView.frame, from: feedViewController.selectedImageView.superview)
+        toViewController.imageView.frame = frame
+
+        tempView.frame = frame
+        tempView.contentMode = feedViewController.selectedImageView.contentMode
+        tempView.clipsToBounds = feedViewController.selectedImageView.clipsToBounds
+        toViewController.view.addSubview(tempView)
         
         toViewController.view.alpha = 0
         
-        let destinationImageFrame = toViewController.imageView.frame
         
-        toViewController.imageView.frame = feedViewController.selectedImageView.frame
-        
-//        feedViewController.selectedImageView.frame = toViewController.imageView.frame
-        
-        toViewController.imageView.frame = destinationImageFrame
-        
-        UIView.animate(withDuration: duration, animations: {
+        UIView.animate(withDuration: 0.4, animations: {
+            
             toViewController.view.alpha = 1
-        }) { (finished: Bool) -> Void in
+            
+            //Question: How do I programmatically get the x and y coordinates of the view in context of the view controller
+            tempView.frame = CGRect(x: originalImageSize.origin.x, y: originalImageSize.origin.y + 73, width: originalImageSize.size.width, height: originalImageSize.size.height)
+            tempView.contentMode = UIViewContentMode.scaleAspectFit
+            
+            }) { (finished: Bool) -> Void in
             self.finish()
         }
     }
@@ -41,8 +51,11 @@ class ImageTransition: BaseTransition {
     override func dismissTransition(containerView: UIView, fromViewController: UIViewController, toViewController: UIViewController) {
         
         fromViewController.view.alpha = 1
-        UIView.animate(withDuration: duration, animations: {
+        
+        UIView.animate(withDuration: 0.4, animations: {
+            
             fromViewController.view.alpha = 0
+            
         }) { (finished: Bool) -> Void in
             self.finish()
         }
