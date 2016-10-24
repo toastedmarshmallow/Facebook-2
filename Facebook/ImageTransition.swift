@@ -43,8 +43,14 @@ class ImageTransition: BaseTransition {
             tempView.frame = CGRect(x: originalImageSize.origin.x, y: originalImageSize.origin.y + 73, width: originalImageSize.size.width, height: originalImageSize.size.height)
             tempView.contentMode = UIViewContentMode.scaleAspectFit
             
+            toViewController.imageView.image = tempView.image
+            toViewController.imageView.frame = originalImageSize
+            toViewController.imageView.backgroundColor = UIColor(white: 0, alpha: 1)
+            
             }) { (finished: Bool) -> Void in
             self.finish()
+
+            tempView.removeFromSuperview()
         }
     }
     

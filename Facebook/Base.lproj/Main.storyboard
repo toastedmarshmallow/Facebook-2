@@ -137,11 +137,11 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" id="YZ6-vp-O3X">
-                                <frame key="frameInset" minY="108.5" width="320" height="108.38%"/>
+                                <frame key="frameInset" minY="109" width="320" height="108.39%"/>
                                 <autoresizingMask key="autoresizingMask" heightSizable="YES" flexibleMaxY="YES"/>
                                 <subviews>
                                     <imageView userInteractionEnabled="NO" contentMode="top" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="home_feed-1" id="BFk-jQ-UCW">
-                                        <rect key="frame" x="0.0" y="-1.5" width="320" height="1.5"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="320" height="0.5"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" heightSizable="YES"/>
                                     </imageView>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="6Vc-xY-a2r">
@@ -672,7 +672,7 @@
                                 </subviews>
                                 <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </view>
-                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" id="UfX-5R-EVg">
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" directionalLockEnabled="YES" id="UfX-5R-EVg">
                                 <frame key="frameInset" minY="73" width="320" height="452"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <subviews>
@@ -691,6 +691,7 @@
                     </view>
                     <connections>
                         <outlet property="imageView" destination="OZ5-Sf-hRS" id="bVc-Ie-Mj6"/>
+                        <outlet property="scrollView" destination="UfX-5R-EVg" id="Tkx-G8-LBq"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hZU-EU-zrL" userLabel="First Responder" sceneMemberID="firstResponder"/>

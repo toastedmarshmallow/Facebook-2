@@ -8,8 +8,9 @@
 
 import UIKit
 
-class PhotoViewController: UIViewController {
+class PhotoViewController: UIViewController, UIScrollViewDelegate {
     
+    @IBOutlet weak var scrollView: UIScrollView!
     var image: UIImage!
     @IBOutlet weak var imageView: UIImageView!
     
@@ -17,8 +18,10 @@ class PhotoViewController: UIViewController {
         super.viewDidLoad()
         
         imageView.image = image
+        
+        scrollView.contentSize = CGSize(width: 320, height: 600)
 
-        // Do any additional setup after loading the view.
+        scrollView.delegate = self
     }
 
     override func didReceiveMemoryWarning() {
@@ -30,7 +33,7 @@ class PhotoViewController: UIViewController {
         
         dismiss(animated: true, completion: nil)
     }
-
+    
     /*
     // MARK: - Navigation
 
