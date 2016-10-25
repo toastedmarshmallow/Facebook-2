@@ -141,7 +141,7 @@
                                 <autoresizingMask key="autoresizingMask" heightSizable="YES" flexibleMaxY="YES"/>
                                 <subviews>
                                     <imageView userInteractionEnabled="NO" contentMode="top" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="home_feed-1" id="BFk-jQ-UCW">
-                                        <rect key="frame" x="0.0" y="0.0" width="320" height="0.5"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="320" height="0.0"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" heightSizable="YES"/>
                                     </imageView>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="6Vc-xY-a2r">
@@ -280,7 +280,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="nav_back" id="3oc-Q7-6D1">
-                                <frame key="frameInset" minY="-0.5" maxX="0.5" maxY="504"/>
+                                <frame key="frameInset" minY="-1.5" maxX="0.5" maxY="504.5"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="nAB-bO-ZjO">
@@ -395,7 +395,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="create_status" id="3t6-iT-7U1">
-                                <frame key="frameInset" minX="-0.5" maxX="0.5" maxY="0.5"/>
+                                <frame key="frameInset" maxY="0.5"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="ZuE-tp-cfr">
@@ -655,7 +655,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" misplaced="YES" id="EEr-w2-cLk">
-                                <frame key="frameInset" width="375" height="75"/>
+                                <frame key="frameInset" width="321" height="75"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <subviews>
                                     <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" misplaced="YES" image="doneButton" id="4vo-TC-qmo">
@@ -670,7 +670,6 @@
                                         </connections>
                                     </button>
                                 </subviews>
-                                <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </view>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" directionalLockEnabled="YES" id="UfX-5R-EVg">
                                 <frame key="frameInset" minY="73" width="320" height="452"/>
@@ -691,6 +690,7 @@
                     </view>
                     <connections>
                         <outlet property="imageView" destination="OZ5-Sf-hRS" id="bVc-Ie-Mj6"/>
+                        <outlet property="photoUIView" destination="KTE-00-aHL" id="kq5-w0-wxC"/>
                         <outlet property="scrollView" destination="UfX-5R-EVg" id="Tkx-G8-LBq"/>
                     </connections>
                 </viewController>

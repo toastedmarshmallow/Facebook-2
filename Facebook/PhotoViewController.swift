@@ -10,6 +10,10 @@ import UIKit
 
 class PhotoViewController: UIViewController, UIScrollViewDelegate {
     
+    var selectedImageView: UIImageView!
+    var imageTransition: ImageTransition!
+    
+    @IBOutlet var photoUIView: UIView!
     @IBOutlet weak var scrollView: UIScrollView!
     var image: UIImage!
     @IBOutlet weak var imageView: UIImageView!
@@ -32,6 +36,45 @@ class PhotoViewController: UIViewController, UIScrollViewDelegate {
     @IBAction func didTapDone(_ sender: UIButton) {
         
         dismiss(animated: true, completion: nil)
+    }
+    
+    func scrollViewDidScroll(_ scrollView: UIScrollView) {
+        
+        //This method is called as the user scrolls
+        print("I'm scrolling!")
+        print(scrollView.contentOffset.y)
+
+        photoUIView.backgroundColor = UIColor(white: 0, alpha: 1)
+
+        if (scrollView.contentOffset.y < -20)
+        {
+            photoUIView.alpha = -90/(scrollView.contentOffset.y - 100)
+            print(photoUIView.alpha)
+            
+            if (scrollView.contentOffset.y < -100){
+                dismiss(animated: false, completion: nil)
+            }
+            
+        } else if (scrollView.contentOffset.y > -20){
+            photoUIView.alpha = -100/(scrollView.contentOffset.y - 100)
+            print(photoUIView.alpha)
+            
+        }
+        
+        
+    }
+    
+    
+    func scrollViewWillBeginDragging(_ scrollView: UIScrollView) {
+        
+    }
+    
+    func scrollViewDidEndDragging(_ scrollView: UIScrollView, willDecelerate decelerate: Bool) {
+        // This method is called right as the user lifts their finger
+    }
+    
+    func scrollViewDidEndDecelerating(_ scrollView: UIScrollView) {
+        // This method is called when the scrollview finally stops scrolling.
     }
     
     /*
